@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
 
-    url('^$', views.my_profile, name='my_profile'),
-    url('^news$', views.post_list, name="post_list"),
+    url(r'^$', views.my_profile, name='my_profile'),
+    url(r'^news$', views.post_list, name="post_list"),
+    url(r'^news/(?P<pk>\d+)/$', views.post_detail, name='post_detail'),
 ]

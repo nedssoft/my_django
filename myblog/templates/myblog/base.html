@@ -1,4 +1,4 @@
-{%load staticfiles%}
+{% load staticfiles %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -10,7 +10,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Django Girls Blog</title>
+    <title>Orie Chinedu-Blog</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -22,26 +22,8 @@
 
 <body>
     <div class="container-fluid">
-
-        <div class="col-md-6 offset-md-1">
-            {% for post in posts%}
-
-            <div class="card" style="margin: 20px 0px">
-                <!-- <div class="card-header">
-                    Trending Now
-                </div> -->
-                <img class="card-img-top" src="{% static 'img/avartar.jpg' %}" height="360px" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{post.title}}</h5>
-                    <p class="card-text">{{post.text}}</p>
-                    <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-primary">view details</a>
-                </div>
-                <div class="card-footer text-muted">
-                    Published: {{post.published_date}}
-                </div>
-            </div>
-            {% endfor %}
-        </div>
+        {% block content%} {% endblock content%}
+    </div>
 </body>
 
 </html>

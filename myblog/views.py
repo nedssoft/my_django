@@ -16,3 +16,11 @@ def get_users(request):
 
 def my_profile(request):
     return render(request, 'myblog/my_profile.html', {})
+
+
+def post_detail(request, pk):
+    post = Post.objects.get(pk=pk)
+    if post:
+        return render(request, 'myblog/post_detail.html', {'post': post})
+    else:
+        return render(request, 'myblog/post_detail.html', {'pk': pk})

@@ -1,0 +1,22 @@
+ {% extends 'myblog/base.html' %} {%load staticfiles %} {% block content %}
+<div class="col-md-6 offset-md-2">
+
+
+    <div class="card" style="margin: 20px 0px">
+        <!-- <div class="card-header">
+            Trending Now
+        </div> -->
+        <img class="card-img-top" src="{% static 'img/avartar.jpg' %}" height="360px" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{post.title}}</h5>
+            <p class="card-text">{{post.text}}</p>
+        </div>
+        <div class="card-footer text-muted">
+            Published: {{post.published_date}}
+        </div>
+    </div>
+
+</div>
+{% endblock content%}
+
+</html>

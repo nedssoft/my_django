@@ -8,11 +8,7 @@ from .forms import PostForm
 
 def post_list(request):
     posts = Post.objects.all()
-    return render(request, 'myblog/post_list.html', {'posts': posts})
-
-
-def get_users(request):
-    return render(request, 'myblog/users.html', {})
+    return render(request, 'myblog/post_list.html', {'posts': posts}) 
 
 
 def my_profile(request):

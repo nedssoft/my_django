@@ -49,9 +49,12 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
                     </li>
+                    {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="/news">MyBlog</a>
                     </li>
+                    {% endif %}
+
                 </ul>
             </div>
         </div>

@@ -1,0 +1,7 @@
+{% extends 'myblog/base.html' %} {% load staticfiles %} {% block content %}
+<div class="col-md-6 offset-md-1 post-form" style="margin: 50px auto">
+    <form method="POST" class="post-form">{% csrf_token %} {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+</div>
+{% endblock content %}
